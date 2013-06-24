@@ -1,0 +1,63 @@
+
+{% extends '::baseAdminFotografo.html.twig' %}
+
+        {% block cuerpo %}
+        <div id="contenido" >
+            <div id="contenidoPrincipal">
+                <section>
+                    <h3>Alta Forma Pago</h3> 
+                    
+                    <form action="{{ path('alta_fp_fotografo') }}" method="post" {{ form_enctype(form) }}>
+                        
+                        {{ form_errors(form) }}
+                        
+                        <p>
+                            {{ form_label(form.codigoFormaPago) }}
+                            {{ form_widget(form.codigoFormaPago) }}
+                            {{ form_errors(form.codigoFormaPago) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.nombre) }}
+                            {{ form_widget(form.nombre) }}
+                            {{ form_errors(form.nombre) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.descripcion) }}
+                            {{ form_widget(form.descripcion) }}
+                            {{ form_errors(form.descripcion) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.ayuda) }}
+                            {{ form_widget(form.ayuda) }}
+                            {{ form_errors(form.ayuda) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.disponible) }}
+                            {{ form_widget(form.disponible) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.esPrepago) }}
+                            {{ form_widget(form.esPrepago) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.esDepositoBancario) }}
+                            {{ form_widget(form.esDepositoBancario) }}
+                        </p>
+                        <p>
+                            {{ form_label(form.entidadCobradoraExterna) }}
+                            {{ form_widget(form.entidadCobradoraExterna) }}
+                        </p> 
+                        
+                        {{ form_rest(form) }}
+                        <p>        
+                            <input type="submit" name="aceptar" value="Aceptar" />
+                            <input type="button" name="cancelar" value="Cancelar" onclick="document.location='{{ path('admin_fp_fotografo') }}'; return false;" />
+                        </p>
+                    </form>
+        
+                </section>
+            </div>
+        </div>
+    {% endblock %}
+    
+

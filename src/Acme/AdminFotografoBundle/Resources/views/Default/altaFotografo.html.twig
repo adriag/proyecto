@@ -1,0 +1,77 @@
+
+{% extends '::adminFotografo.html.twig' %}
+
+        {% block cuerpo %}
+        <div id="contenido" >
+            <div id="contenidoPrincipal">
+                <section>
+                    <h3>Alta Fotógrafo</h3> 
+                    
+                    <form action="{{ path('alta_fotografo') }}" method="post" {{ form_enctype(form) }}>
+                        
+                        {{ form_errors(form) }}
+                        
+                        <p>
+                            {{ form_label(form.nombre) }}
+                            {{ form_widget(form.nombre) }}
+                            {{ form_errors(form.nombre) }}
+                        </p>
+                        <p>
+                            {{ form_label(form.apellido) }}
+                            {{ form_widget(form.apellido) }}
+                            {{ form_errors(form.apellido) }}
+                        </p>  
+                        <p>
+                            {{ form_label(form.email) }}
+                            {{ form_widget(form.email) }}
+                            {{ form_errors(form.email) }}
+                        </p>
+                        <p>
+                            {{ form_label(form.usuario) }}
+                            {{ form_widget(form.usuario) }}
+                            {{ form_errors(form.usuario) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.contrasenia) }}
+                            {{ form_widget(form.contrasenia) }}
+                            {{ form_errors(form.contrasenia) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.direccion) }}
+                            {{ form_widget(form.direccion) }}
+                            {{ form_errors(form.direccion) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.telefono) }}
+                            {{ form_widget(form.telefono) }}
+                            {{ form_errors(form.telefono) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.estudio) }}
+                            {{ form_widget(form.estudio) }}
+                            {{ form_errors(form.estudio) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.direccionEstudio) }}
+                            {{ form_widget(form.direccionEstudio) }}
+                            {{ form_errors(form.direccionEstudio) }}
+                        </p>
+                        <p>
+                            {{ form_label(form.telefonoEstudio) }}
+                            {{ form_widget(form.telefonoEstudio) }}
+                            {{ form_errors(form.telefonoEstudio) }}
+                        </p> 
+                        
+                        {{ form_rest(form) }}
+                        <p>        
+                            <input type="submit" name="aceptar" value="Aceptar" />
+                            <input type="button" name="cancelar" value="Cancelar" onclick="document.location='{{ path('admin_fotografo') }}'; return false;" />
+                        </p>
+                    </form>
+        
+                </section>
+            </div>
+        </div>
+    {% endblock %}
+    
+

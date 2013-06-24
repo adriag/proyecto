@@ -1,0 +1,361 @@
+<?php
+
+namespace Acme\AdminFotografoBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints as DoctrineAssert;
+
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="Fotografo")
+ * 
+ * @DoctrineAssert\UniqueEntity(fields = "email", message="El email ingresado corresponde a un usuario ya registrado.")
+ * 
+ */
+class Fotografo {
+    
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * 
+     */
+    protected $id;
+    
+        
+    /**
+     * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank()
+     * @Assert\MaxLength(limit = 50, message = "El máximo número de caracteres es 50.")
+     * 
+     */
+    protected $nombre;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank()
+     * @Assert\MaxLength(limit = 50, message = "El máximo número de caracteres es 50.")
+     * 
+     */
+    protected $apellido;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank()
+     * @Assert\MaxLength(limit = 50, message = "El máximo número de caracteres es 50.")
+     * 
+     */
+    protected $email;
+    
+    /**
+     * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
+     * @Assert\MaxLength(limit = 50, message = "El máximo número de caracteres es 30.")
+     * 
+     */
+    protected $usuario;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=30)
+     * @Assert\NotBlank()
+     * @Assert\MaxLength(limit = 50, message = "El máximo número de caracteres es 30.")
+     * 
+     */
+    protected $contrasenia;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank()
+     * @Assert\MaxLength(limit = 50, message = "El máximo número de caracteres es 50.")
+     * 
+     */
+    protected $direccion;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=20)
+     * @Assert\NotBlank()
+     * @Assert\MaxLength(limit = 20, message = "El máximo número de caracteres es 20.")
+     * 
+     */
+    protected $telefono;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank()
+     * @Assert\MaxLength(limit = 50, message = "El máximo número de caracteres es 50.")
+     * 
+     */
+    protected $estudio;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=50)
+     * @Assert\MaxLength(limit = 50, message = "El máximo número de caracteres es 50.")
+     * 
+     */
+    protected $direccionEstudio;
+    
+    
+    /**
+     * @ORM\Column(type="string", length=20)
+     * @Assert\MaxLength(limit = 20, message = "El máximo número de caracteres es 20.")
+     * 
+     */
+    protected $telefonoEstudio;
+    
+    public function setId($id)
+    {
+        $this->id = $id;
+    
+        return $this;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     * @return Fotografo
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+    
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string 
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set apellido
+     *
+     * @param string $apellido
+     * @return Fotografo
+     */
+    public function setApellido($apellido)
+    {
+        $this->apellido = $apellido;
+    
+        return $this;
+    }
+
+    /**
+     * Get apellido
+     *
+     * @return string 
+     */
+    public function getApellido()
+    {
+        return $this->apellido;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return Fotografo
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set contrasenia
+     *
+     * @param string $contrasenia
+     * @return Fotografo
+     */
+    public function setContrasenia($contrasenia)
+    {
+        $this->contrasenia = $contrasenia;
+    
+        return $this;
+    }
+
+    /**
+     * Get contrasenia
+     *
+     * @return string 
+     */
+    public function getContrasenia()
+    {
+        return $this->contrasenia;
+    }
+
+    /**
+     * Set direccion
+     *
+     * @param string $direccion
+     * @return Fotografo
+     */
+    public function setDireccion($direccion)
+    {
+        $this->direccion = $direccion;
+    
+        return $this;
+    }
+
+    /**
+     * Get direccion
+     *
+     * @return string 
+     */
+    public function getDireccion()
+    {
+        return $this->direccion;
+    }
+
+    /**
+     * Set telefono
+     *
+     * @param string $telefono
+     * @return Fotografo
+     */
+    public function setTelefono($telefono)
+    {
+        $this->telefono = $telefono;
+    
+        return $this;
+    }
+
+    /**
+     * Get telefono
+     *
+     * @return string 
+     */
+    public function getTelefono()
+    {
+        return $this->telefono;
+    }
+
+    /**
+     * Set estudio
+     *
+     * @param string $estudio
+     * @return Fotografo
+     */
+    public function setEstudio($estudio)
+    {
+        $this->estudio = $estudio;
+    
+        return $this;
+    }
+
+    /**
+     * Get estudio
+     *
+     * @return string 
+     */
+    public function getEstudio()
+    {
+        return $this->estudio;
+    }
+
+    /**
+     * Set direccionEstudio
+     *
+     * @param string $direccionEstudio
+     * @return Fotografo
+     */
+    public function setDireccionEstudio($direccionEstudio)
+    {
+        $this->direccionEstudio = $direccionEstudio;
+    
+        return $this;
+    }
+
+    /**
+     * Get direccionEstudio
+     *
+     * @return string 
+     */
+    public function getDireccionEstudio()
+    {
+        return $this->direccionEstudio;
+    }
+
+    /**
+     * Set telefonoEstudio
+     *
+     * @param string $telefonoEstudio
+     * @return Fotografo
+     */
+    public function setTelefonoEstudio($telefonoEstudio)
+    {
+        $this->telefonoEstudio = $telefonoEstudio;
+    
+        return $this;
+    }
+
+    /**
+     * Get telefonoEstudio
+     *
+     * @return string 
+     */
+    public function getTelefonoEstudio()
+    {
+        return $this->telefonoEstudio;
+    }
+
+    /**
+     * Set usuario
+     *
+     * @param string $usuario
+     * @return Fotografo
+     */
+    public function setUsuario($usuario)
+    {
+        $this->usuario = $usuario;
+    
+        return $this;
+    }
+
+    /**
+     * Get usuario
+     *
+     * @return string 
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+}

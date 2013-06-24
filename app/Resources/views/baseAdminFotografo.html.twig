@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('bundles/acmeadminfotografo/css/estilomenu.css') }}"
+         
+        {% import "forms.html.twig" as forms %}
+    </head>
+    <body>
+        <div id="agrupar">
+    <header id="cabecera">
+        {% block cabecera %}
+        
+        <div id="contenidoPrincipal1">
+            
+            <img height="91" src="{{ asset('bundles/acmeadminfotografo/images/encabezado_intranet_r1_c1.jpg') }}" />
+            
+        </div>
+        <div id="zonaSecundaria">
+            <img height="91" src="{{ asset('bundles/acmeadminfotografo/images/encabezado_intranet_r1_c2.jpg') }}" />
+
+        </div>
+        
+        <div id="zonaTerciaria">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" >
+            <tr>
+                <td align="center" height="68">
+                    <img src="{{ asset('bundles/acmeadminfotografo/images/logo_ioslocales_intra.gif') }}" />
+                </td>
+            
+            </tr>
+            <tr>
+                <td valign="bottom" >
+                    <img height="23" width="248" src="{{ asset('bundles/acmeadminfotografo/images/encabezado_intranet_r2_c3.jpg') }}" />
+                </td>
+            
+            </tr>
+            </table>
+        </div>
+        
+    {% endblock %}
+  
+    </header>
+        
+                <nav id="menu">
+        {% block menu %}
+   <ul class="nav">
+	<li>
+		<a href="#">Home<span class="flecha">&#9660;</span></a>
+	</li>
+	<li>
+		<a href="#">Menu<span class="flecha">&#9660;</span></a>
+		<ul>
+			<li><a href="#">Submenu 1<span class="flecha">&#9660;</span></a></li>
+			<li>
+				<a href="#">Submenu 2<span class="flecha">&#9660;</span></a>
+				<ul>
+					<li><a href="#">Submenu 2.1<span class="flecha">&#9660;</span></a></li>
+					<li><a href="#">Submenu 2.2<span class="flecha">&#9660;</span></a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="">Fotografo<span class="flecha">&#9660;</span></a>
+		<ul>
+			<li><a href="{{ path('admin_fp_fotografo') }}">Formas Pago<span class="flecha">&#9660;</span></a></li>
+			<li><a href="{{ path('admin_plan_fotografo') }}">Planes<span class="flecha">&#9660;</span></a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#">Contacto<span class="flecha">&#9660;</span></a>
+	</li>
+</ul>
+    
+        {% endblock %}
+</nav>
+        {% block cuerpo %}{% endblock %}
+    </div>
+    </body>
+</html>

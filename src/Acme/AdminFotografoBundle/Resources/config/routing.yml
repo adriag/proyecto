@@ -1,0 +1,60 @@
+alta_fp_fotografo:
+    pattern:  /altafpagofot
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:altaFPFotografo }
+
+admin_fp_fotografo:
+    pattern:  /adminfpagofot
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:adminFPFotografo }
+    
+modif_fp_fotografo:
+    pattern:  /modiffpagofot
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:modifFPFotografo }
+
+elim_fp_fotografo:
+    pattern:  /elimfpagofot
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:elimFPFotografo }
+    
+alta_plan_fotografo:
+    pattern:  /altaplanfot
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:altaPlanFotografo }
+
+admin_plan_fotografo:
+    pattern:  /adminplanfot
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:adminPlanFotografo }
+    
+modif_plan_fotografo:
+    pattern:  /modifplanfot
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:modifPlanFotografo }
+
+elim_plan_fotografo:
+    pattern:  /elimplanfot
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:elimPlanFotografo }
+    
+menu_fotografo:
+    pattern:  /menufot
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:menuFotografo }
+
+alta_fotografo:
+    pattern:  /altafotog
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:altaFotografo }
+
+modif_fotografo:
+    pattern:  /modiffotog
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:modifFotografo }
+    
+admin_fotografo:
+    pattern:  /adminfotog
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:adminFotografo }
+    
+admin_fotografo1:
+    pattern:  /admin1fotog
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:adminFotografo1 }
+    
+login_fotografo:
+    pattern:  /loginfotog
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:loginFotografo }
+    
+logout_fotografo:
+    pattern:  /logoutfotog
+    defaults: { _controller: AcmeAdminFotografoBundle:Default:logoutFotografo }
+    

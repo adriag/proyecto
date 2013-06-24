@@ -1,0 +1,50 @@
+
+{% extends '::baseAdminFotografo.html.twig' %}
+
+        {% block cuerpo %}
+
+    <div id="global">
+        
+       <h3>Administración de Formas de Pago</h3> 
+            
+        <form action="{{ path('elim_fp_fotografo') }}" method="post"  >
+         <br/>
+         {% if (formaspago) %}
+        
+            <table border="0" align="center" WIDTH=600 id="tabla"  >
+                <tr>
+                    <th class="tablatitulo" scope="col">Código</th>
+                    <th class="tablatitulo" scope="col">Nombre</th>
+                    <th class="tablatitulo" scope="col">Descripción</th>
+                    <th class="tablatitulo" scope="col">Disponible</th>
+                    <th class="texto" scope="col"></th>
+                </tr>
+             
+                {% for formapago in formaspago %}
+                <tr id="{{ formapago.id }}">
+                    <td class="tablacelda">{{ formapago.codigoFormaPago }}  </td>
+                    <td class="tablacelda">{{ formapago.nombre }}  </td>
+                    <td class="tablacelda">{{ formapago.descripcion }}  </td>
+                    <td class="tablacelda">{% if formapago.disponible %}
+                            S
+                        {% else %}
+                            N
+                        {% endif %}
+                    </td>
+                    <td> <input type="button" value="Modificar" id="{{ formapago.id }}" onclick="document.location='{{ path('modif_fp_fotografo', { 'id' : formapago.id } ) }}'; return false;" />
+         <!--               
+                        <input type="button" value="Eliminar" id="{{ formapago.id }}" onclick="document.location='{{ path('elim_fp_fotografo', { 'id' : formapago.id } ) }}'; return false;" /> </td>
+         -->       
+                </tr>
+                {% endfor %}
+            </table>
+         {% endif %}
+        <br />
+        <p>
+        <input type="button" value="Agregar" id="alta" onclick="document.location='{{ path('alta_fp_fotografo') }}'; return false;" />
+        </p>
+        </form>
+    </section>
+            </div>
+        </div>
+    {% endblock %}

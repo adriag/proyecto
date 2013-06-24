@@ -1,0 +1,53 @@
+
+{% extends '::baseAdminFotografo.html.twig' %}
+
+        {% block cuerpo %}
+
+    <div id="global">
+       <h3>Administración de Planes de Fotógrafos</h3> 
+            
+        <form action="{{ path('elim_fp_fotografo') }}" method="post"  >
+         <br/>
+         {% if (planes) %}
+        
+            <table border="0" align="center" WIDTH=600 id="tabla"  >
+                <tr>
+                    <th class="tablatitulo" scope="col">Código</th>
+                    <th class="tablatitulo" scope="col">Nombre</th>
+                    <th class="tablatitulo" scope="col">Descripción</th>
+                    <th class="tablatitulo" scope="col">Disponible</th>
+                    <th class="texto" scope="col"></th>
+                </tr>
+             
+                {% for plan in planes %}
+                <tr id="{{ plan.id }}">
+                    <td class="tablacelda">{{ plan.codigoPlan }}  </td>
+                    <td class="tablacelda">{{ plan.nombre }}  </td>
+                    <td class="tablacelda">{{ plan.descripcion }}  </td>
+                    <td class="tablacelda">{% if plan.disponible %}
+                            S
+                        {% else %}
+                            N
+                        {% endif %}
+                    </td>
+                    <td> <input type="button" value="Modificar" id="{{ plan.id }}" onclick="document.location='{{ path('modif_plan_fotografo', { 'id' : plan.id } ) }}'; return false;" />
+         <!--  
+                        <input type="button" value="Eliminar" id="{{ plan.id }}" onclick="document.location='{{ path('elim_plan_fotografo', { 'id' : plan.id } ) }}'; return false;" /> </td>
+          -->
+                </tr>
+                {% endfor %}
+            </table>
+         {% endif %}
+        <br />
+        <p>
+        <input type="button" value="Agregar" id="alta" onclick="document.location='{{ path('alta_plan_fotografo') }}'; return false;" />
+        </p>
+        
+        
+        </form>
+   
+    </section>
+            </div>
+        </div>
+    {% endblock %}
+

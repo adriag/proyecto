@@ -1,0 +1,19 @@
+  
+#Acme\AdminFotografoBundle\Entity\FormaPagoFotografo:
+#  properties:
+#    codigoFormaPago:
+#      - NotBlank: ~
+#      - MaxLength: 3
+#    nombre:
+#      - NotBlank: ~
+#      - MaxLength: 50
+#    descripcion:
+#      - MaxLength: 100
+#    ayuda:
+#      - MaxLength: 250
+#      
+#Acme\AdminFotografoBundle\Entity\FormaPagoFotografo:
+#  constraints:
+#        - \Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: codigoFormaPago
+#  
+#  

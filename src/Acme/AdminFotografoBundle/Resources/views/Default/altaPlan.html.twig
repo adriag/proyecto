@@ -1,0 +1,54 @@
+
+{% extends '::baseAdminFotografo.html.twig' %}
+
+        {% block cuerpo %}
+        <div id="contenido" >
+            <div id="contenidoPrincipal">
+                <section>
+                    <h3>Alta Plan Fotógrafo</h3> 
+                    
+                    <form action="{{ path('alta_plan_fotografo') }}" method="post" {{ form_enctype(form) }}>
+                        
+                        {{ form_errors(form) }}
+                        <p>
+                            {{ form_label(form.codigoPlan) }}
+                            {{ form_widget(form.codigoPlan) }}
+                            {{ form_errors(form.codigoPlan) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.nombre) }}
+                            {{ form_widget(form.nombre) }}
+                            {{ form_errors(form.nombre) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.descripcion) }}
+                            {{ form_widget(form.descripcion) }}
+                            {{ form_errors(form.descripcion) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.diasVigencia) }}
+                            {{ form_widget(form.diasVigencia) }}
+                            {{ form_errors(form.diasVigencia) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.disponible) }}
+                            {{ form_widget(form.disponible) }}
+                        </p> 
+                        <p>
+                            {{ form_label(form.entidadFormaPago) }}
+                            {{ form_widget(form.entidadFormaPago) }}
+                        </p>
+                        
+                        {{ form_rest(form) }}
+                        <p>        
+                            <input type="submit" name="aceptar" value="Aceptar" />
+                            <input type="button" name="cancelar" value="Cancelar" onclick="document.location='{{ path('admin_plan_fotografo') }}'; return false;" />
+                        </p>
+                    </form>
+        
+                </section>
+            </div>
+        </div>
+    {% endblock %}
+    
+

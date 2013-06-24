@@ -1,0 +1,51 @@
+{% extends '::baseLogin.html.twig' %}
+
+
+        {% block cuerpo %}
+
+
+
+  
+<form method="POST" action="?">
+    
+    <br /><br /><br />  <br />
+    <p class="titpagina">Bienvenido a Rollpix iLab Manager</p> 
+<br />
+
+        
+ <div id="contenidoPrincipal1">
+            
+            <img width="137" src="" />
+            
+        </div>
+        <div id="zonaSecundaria1">
+            <img height="216" src="{{ asset('bundles/acmeadminfotografo/images/imagen_login.jpg') }}" />
+
+        </div>
+        
+        <div id="zonaTerciaria">
+            <table class="cajacelda" width="220" height="192"  cellpadding="0" cellspacing="0" border="0" align="center" >
+                <tr>
+                    <td class="cajatop" width="20"></td>
+                    <td class="cajatop">Inicio sesión</td>
+                </tr>
+                 <tr>
+                     <td class="cajamedio"></td>
+                    <td class="cajamedio"></td>
+                </tr>
+                <tr>
+                    <td class="cajamedio"></td>
+                    <td class="cajamedio">Login : <input type="text" size="10" maxlenght="50" name="frmUsername"></td>
+                </tr>
+                <tr>
+                    <td class="cajamedio"></td>
+                    <td class="cajamedio">Clave : <input type="password" size="10" maxlenght="50"  name="frmPassword"><input type="submit" value="Ir"></td>
+                <tr>
+                    <td class="cajamedio"></td>
+                    <td class="cajamedio"></td></td>
+                </tr>
+            </table>
+        </div>
+</form>
+    {% endblock %}
+

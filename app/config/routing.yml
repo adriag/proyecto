@@ -1,0 +1,5 @@
+acme_admin_fotografo:
+  resource: "@AcmeAdminFotografoBundle/Resources/config/routing.yml"
+  prefix:    /
+  
+  

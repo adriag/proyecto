@@ -1,0 +1,55 @@
+
+
+body {
+    text-align:center;
+} 
+
+#global {
+    width:800px;
+    margin:4px auto;
+    background-color: #FFFFFF;
+} 
+
+label, input, textarea {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.rotulo {
+    height: 30px;
+    width: 50%;
+    left: 0px;
+    vertical-align: top;
+    float: left;
+    text-align: right;
+}
+
+.rotuloAlto {
+    height: 100px;
+    width: 50%;
+    left: 0px;
+    vertical-align: top;
+    float: left;
+    text-align: right;
+}
+
+.campo {
+    height: 30px;
+    width: 50%;
+    left: 0px;
+    vertical-align: top;
+    float: right;
+    text-align: left;
+
+}
+
+.campoAlto {
+
+    width: 100%;
+    left: 0px;
+    vertical-align: top;
+    float: right;
+    text-align: center;
+}

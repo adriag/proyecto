@@ -1,0 +1,218 @@
+* {
+font-family:sans-serif;
+list-style:none;
+text-decoration:none;
+margin:0;
+padding:0;
+font: 12px verdana, sans-serif;
+}
+
+.nav > li {
+float:left;
+}
+
+.nav li a {
+background:rgb(241, 242, 238);
+color: #000;
+display: block;
+border: #FFF 1px solid;
+padding:10px 12px;
+}
+
+.nav li .flecha{
+padding-left: 6px;
+display: none;
+}
+
+.nav li a:not(:last-child) .flecha {
+display: inline;
+}
+
+.nav li a:hover {
+background:#0fbfc6;
+}
+
+.nav li {
+position:relative;
+}
+
+.nav li ul {
+display:none;
+position:absolute;
+min-width:140px;
+}
+
+.nav li:hover > ul {
+display:block;
+}
+
+.nav li ul li ul {
+right:-140px;
+top:0;
+}
+
+#contenidoPrincipal1 {
+float: left;
+width: 109px;
+padding: 0px;
+margin: 0px;
+height: 91px;
+}
+
+#zonaSecundaria {
+float: left;
+width: 443px;
+padding: 0px;
+margin: 0px;
+height: 91px;
+}
+
+#zonaSecundaria1 {
+float: left;
+width: 306px;
+padding: 0px;
+margin: 0px;
+height: 91px;
+}
+
+#zonaTerciaria {
+float: left;
+height: 91px;
+width: 248px;
+padding: 0px;
+margin: 0px;
+}
+
+#agrupar {
+width: 800px;
+margin: 15px auto;
+text-align: left;
+}
+
+h3 {
+font-family: verdana,arial,helvetica,sans-serif;
+font-size: 16px;
+color: rgb(17, 32, 101);
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+#tabla {
+margin-left:auto; 
+margin-right:auto;
+padding-bottom: 20px;
+}
+
+.tablatitulo {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+font-size: 11px;
+font-weight: bold;
+color: rgb(255, 255, 255);
+padding: 2px;
+border-bottom: 1px solid rgb(0, 0, 0);
+border-top: 1px solid rgb(0, 0, 0);
+background-color: rgb(98, 147, 183);
+}
+
+.texto {
+color: rgb(0, 0, 0);
+}
+
+.tablacelda {
+font-family: Verdana,Arial,Helvetica,sans-serif;
+font-size: 10px;
+font-weight: normal;
+color: rgb(0, 0, 0);
+padding: 1px;
+border-width: 1px;
+border-style: solid;
+border-color: rgb(204, 204, 204);
+}
+
+
+form p {
+display: table;
+margin-bottom: 22px;
+padding: 0 22px;
+}
+
+form label {
+display: table-cell;
+width: 140px;
+padding-right: 20px;
+text-align: right;
+font-weight: bold;
+vertical-align: top;
+font-family: verdana,arial,helvetica,sans-serif;
+font-size: 11px;
+}
+
+
+
+form textarea {
+width: 300px;
+height: 75px;
+border: 1px solid #d7d7d7;
+}
+
+form input[type="submit"] {
+margin-left: 12px;
+font-size: 11px;
+
+}
+
+form input[type="button"] {
+font-size: 11px;
+}
+
+#contenido {
+display: table;
+}
+
+#contenidoPrincipal {
+display: table-cell;
+width: 800px;
+padding-right: 22px;
+}
+
+#menu {
+clear: both;
+display: inline-block;
+list-style: none;
+}
+
+.cajatop {
+    border-bottom: 3px solid rgb(255, 255, 255);
+    background-color: rgb(98, 147, 183);
+    height: 15px;
+    font: 10px verdana,sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;   
+}
+
+.cajamedio {
+    background-color: rgb(255, 255, 255);
+    height: 15px;
+    font: 10px verdana,sans-serif;
+    color: rgb(0,0,0);
+    text-decoration: none;
+    background-color: rgb(219, 231, 240);
+}
+
+.cajacelda {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(219, 231, 240);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.titpagina {
+    font-family: verdana,arial,helvetica,sans-serif;
+    color: rgb(17, 32, 101);
+    font-size: 16px;
+    font-weight: bold;
+    height: 40px;
+}

@@ -1,0 +1,144 @@
+body { 
+    text-align: center;
+}
+
+#agrupar {
+    width: 800px;
+    margin: 15px auto;
+    text-align: left;
+}
+
+#cabecera1 {
+    border: 1px solid #999999;
+    padding: 20px;
+}
+
+#menu {
+    background: rgb(241, 242, 238);
+    padding: 5px 15px;
+    clear: both;
+}
+
+#menu li {
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+    font-size: x-small;
+    font-weight: bold;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font: bold 12px verdana, sans-serif;
+}
+
+#contenido {
+    display: table;
+}
+
+#contenidoPrincipal {
+    display: table-cell;
+    width: 800px;
+    padding-right: 22px;
+}
+
+form p {
+    display: table;
+    margin-bottom: 22px;
+    padding: 0 22px;
+}
+
+form label {
+    display: table-cell;
+    width: 140px;
+    padding-right: 20px;
+    text-align: right;
+    font-weight: bold;
+    vertical-align: top;
+    font-family: verdana,arial,helvetica,sans-serif;
+    font-size: 11px;
+}
+
+form input[type="text"], form input[type="checkbox"], form input[type="url"] {
+    display: table-cell;
+    width: 300px;
+    height: 20px;
+    border: 1px solid #d7d7d7;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+form textarea {
+    width: 300px;
+    height: 75px;
+    border: 1px solid #d7d7d7;
+}
+
+form input[type="submit"] {
+    margin-left: 162px;
+    font-size: 11px;
+}
+
+form input[type="button"] {
+    font-size: 11px;
+}
+
+#contenedorGeneral {
+    width: 800px;
+    text-align: left;
+    background: #FFF;
+}
+
+#contenidoPrincipal1 {
+    float: left;
+    width: 109px;
+    padding: 0px;
+    margin: 0px;
+    height: 91px;
+}
+
+#zonaSecundaria {
+    float: left;
+    width: 443px;
+        padding: 0px;
+    margin: 0px;
+    height: 91px;
+}
+
+#zonaTerciaria {
+    float: left;
+    height: 91px;
+    width: 248px;
+        padding: 0px;
+    margin: 0px;
+}
+
+h3 {
+    font-family: verdana,arial,helvetica,sans-serif;
+    font-size: 16px;
+    color: rgb(17, 32, 101);
+}
+
+.tablatitulo {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 2px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid rgb(0, 0, 0);
+    background-color: rgb(98, 147, 183);
+}
+
+.texto {
+    color: rgb(0, 0, 0);
+}
+
+.tablacelda {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    padding: 1px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+}

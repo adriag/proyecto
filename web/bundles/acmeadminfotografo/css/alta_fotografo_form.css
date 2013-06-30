@@ -1,0 +1,95 @@
+
+body { 
+    padding: 20px;
+    background: #707883;
+    color: #222;
+    text-align: center;
+    font: 16px "Trebuchet MS", Arial,sans-serif;
+}
+h1, h2, p {
+    margin: 0;
+    font-weight: normal;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+}
+p {
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+}
+h1 {
+    font-size: 40px;
+    color: #FFF;
+    letter-spacing: 1px;
+}
+h2 {
+    font-size: 35px;
+    line-height: 1;
+    color: #002455;
+}
+#contenedorGeneral {
+    width: 800px;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: left;
+    background: #FFF;
+}
+#rotulo {
+    padding: 10px;
+    text-align: center;
+    background: #BFDDED;
+}
+#contenidoPrincipal1 {
+    float: left;
+    width: 109px;
+    background: #778CCA;
+    margin-top: 5px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+}
+#zonaSecundaria {
+    float: left;
+    width: 443px;
+    background: #FFD154;
+    margin: 5px 0;
+    padding: 10px 0;
+}
+#zonaSecundaria h2 {
+    font-size: 22px;
+    color: #9E4A24;
+}
+#zonaTerciaria {
+    float: right;
+    width: 248px;
+    background: #FFD154;
+    margin: 5px 0;
+    padding: 10px 0;
+}
+#pieDeTabla {
+    clear: both;
+    height: 30px;
+    text-align: center;
+    background-color: #FFFF66;
+    padding-top: 2px;
+    padding-right: 0px;
+    padding-bottom: 2px;
+    padding-left: 0px;
+}
+#menu {
+    background: #CCCCCC;
+    padding: 5px 15px;
+}
+#menu li {
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+    font: bold 14px verdana, sans-serif;
+}
